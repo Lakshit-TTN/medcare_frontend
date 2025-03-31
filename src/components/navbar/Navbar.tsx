@@ -94,6 +94,8 @@ const Navbar: FC = () => {
               Appointments
             </Link>
 
+            <Link href="/healthBlog" className={pathname === "/healthBlog" ? styles.active : ""}>Health Blog</Link>
+            <Link href="/reviews" className={pathname === "/reviews" ? styles.active : ""}>Reviews</Link>
             <Link href="/contacts" className={pathname === "/contacts" ? styles.active : ""}>Contacts</Link>
 
             <div className={styles["mobile-auth-buttons"]}>
