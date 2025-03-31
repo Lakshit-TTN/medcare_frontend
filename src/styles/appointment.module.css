@@ -1,0 +1,420 @@
+
+.container {
+  display: flex;
+  height: calc(100vh - 99.2px);
+}
+.disabledDate {
+  background-color: #e0e0e0 !important;
+  color: #888 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.leftSection {
+  background-color: var(--primary-green);
+  color: white;
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  padding: 150px 40px;
+}
+.leftSection h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.leftSection p {
+  color: #ffffffc9;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.rightSection {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/appointBG.png') no-repeat center center / cover;
+}
+.card {
+  width: 550px;
+  height: 600px;
+  background: white;
+  padding: 20px;
+  transform: scale(0.95) translateY(-20px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.cardHeader h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.bookBtn {
+  width: 40%;
+  padding: 10px;
+  background: var(--button-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.nextBtn {
+  width: 100%;
+  padding: 10px;
+  background: var(--button-green);
+  color: white;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.nextBtn:hover {
+  background: #14351F;
+}
+.toggleButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.toggleButtons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: white;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.toggleButtons .active {
+  background: var(--button-green);
+  color: white;
+}
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  position: relative;
+  background-image: url('/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+.dateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.monthSelector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.monthSelector button {
+  background: white;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 60%;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.monthSelector span {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--button-green);
+}
+.datePickerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  gap: 5px;
+}
+.arrow {
+  background: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 60%;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slotGrid button.disabledSlot, 
+.firstRowSlots button.disabledSlot {
+  background-color: #d3d3d3;
+  color: #777;
+  border: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.datePicker {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  padding: 10px;
+  flex-grow: 1;
+  scroll-behavior: smooth;
+}
+.datePicker::-webkit-scrollbar {
+  display: none;
+}
+.datePicker button {
+  padding: 10px 15px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 100px;
+}
+.datePicker button.selected {
+  background: var(--button-green);
+  color: white;
+  border: none;
+}
+.slotCard {
+  background: white;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+.slotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slotHeader h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--button-green);
+  margin: 0;
+}
+.firstRowSlots {
+  display: flex;
+  padding: 8px;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #FAF5FF;
+}
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.slotGrid button,
+.firstRowSlots button {
+  background: white;
+  padding: 8px 12px;
+  border: 1px solid #F4D7D0;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  min-width: 80px;
+  text-align: center;
+}
+.slotGrid button.active,
+.firstRowSlots button.active {
+  background: var(--button-green);
+  color: white;
+  border: none;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 0px;
+  }
+  .leftSection {
+    display: none;
+  }
+  .rightSection {
+    width: 100%;
+    padding: 20px;
+    background: none;
+  }
+  .card {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .disabledSlot {
+    background-color: #d3d3d3;
+    color: #777;
+    cursor: not-allowed;
+    pointer-events: none; 
+  }
+  .bookBtn,
+  .nextBtn {
+    width: 100%;
+    font-size: 14px;
+  }
+  .rightSection{
+    background-color: var(--primary-green);
+  }
+  .monthSelector span {
+    font-size: 14px;
+  }
+  .dateContainer{
+    margin:20px 0px;
+  }
+  .datePickerContainer {
+    max-width: 100%;
+  }
+  .datePicker {
+    gap: 5px;
+    padding: 5px;
+  }
+  .datePicker button {
+    min-width: 80px;
+    padding: 8px;
+    font-size: 10px;
+  }
+  .slotCard {
+    width: 100%;
+    max-width: 500px;
+  }
+  .slotGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .slotGrid button {
+    min-width: auto;
+    padding: 6px 10px;
+    font-size: 10px;
+    height: 30px;
+  }
+  .firstRowSlots {
+    gap: 5px;
+    font-size: 10px;
+  }
+  .dateContainer {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container{
+    padding: 0;
+  }
+  .rightSection{
+    background-color: var(--primary-green);
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .cardHeader h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .dateContainer {
+    max-width: 100%;
+  }
+  .datePickerContainer {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  .datePicker {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+  }
+  .datePicker button {
+    min-width: unset;
+    width: auto;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  .bookBtn {
+    width: 40%;
+    padding: 10px;
+    background: var(--button-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .arrow{
+    display: none;
+  }
+  .monthSelector{
+    margin-top: 10px;
+  }
+  .slotGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .slotGrid button {
+    padding: 6px;
+    height: 30px;
+    font-size: 9px;
+  }
+  .bookBtn,
+  .nextBtn {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .toggleButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .toggleButtons button {
+    font-size: 12px;
+    width: 100%;
+  }
+}

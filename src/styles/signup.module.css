@@ -1,0 +1,219 @@
+:root {
+  --primary-green: #1C4A2A;
+  --text-muted: #8C8C8C;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87.6vh;
+  background: url('/bg.png') no-repeat center center;
+  background-size: 100% auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  width: 450px;
+  position: relative;
+  overflow: hidden;
+  height: 490px;
+  padding: 20px;
+  border: 1px solid #EFEFEF;
+  z-index: 1;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.card:before {
+  content: "";
+  width: 300px;
+  height: 400px;
+  background: inherit;
+  position: absolute;
+  pointer-events: none;
+  left: -25px;
+  top: -25px;
+  filter: blur(30px);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+.eyeButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #0E2515;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 10px 0px;
+}
+
+.card a {
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin: 10px 0 5px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.input {
+  padding: 20px 30px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.inputP {
+  background: white url('/Lock.svg') no-repeat 10px;
+  background-size: 12px;
+}
+
+.inputE {
+  background: white url('/emailsign.svg') no-repeat 10px;
+  background-size: 12px;
+}
+
+.inputN {
+  background: white url('/cid.svg') no-repeat 10px;
+  background-size: 12px;
+
+}
+
+
+.loginButton {
+  background: var(--primary-green);
+  color: white;
+  padding: 10px;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+
+.resetButton {
+  background: #C6B09A;
+  color: white;
+  padding: 10px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  display: block;
+  margin-top: 10px;
+  color: #0E2515;
+  text-align: center;
+  font-weight: 500;
+
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    background: url('/bg.png') no-repeat center center;
+    background-size: 100% auto;
+    padding: 20px;
+    background-size: cover;
+    height: calc(100vh - 85px);
+
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 15px 30px;
+  }
+
+  .loginButton,
+  .resetButton {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1140px) {
+  .container {
+    padding: 40px;
+    background: url('/bg.png') no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 87px);
+  }
+
+  .card {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .input {
+    padding: 15px 30px;
+  }
+
+  .loginButton,
+  .resetButton {
+    height: 40px;
+    font-size: 16px;
+  }
+}

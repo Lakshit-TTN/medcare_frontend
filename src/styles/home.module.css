@@ -1,0 +1,164 @@
+:root {
+  --primary-green: #1C4A2A;
+}
+
+.homeContainer {
+  display: flex;
+  height: calc(100vh - 91px);
+}
+
+.homeleft {
+  background: var(--primary-green);
+  color: white;
+  padding: 60px;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeleft h1 {
+  font-size: 55px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.homeleft p {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 70px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.btn {
+  background: white;
+  color: var(--primary-green);
+  padding: 15px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.homeright {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .homeContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .homeleft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: calc(100vh - 87px);
+    padding: 10px;
+    text-align: center;
+    }
+
+  .homeleft h1 {
+    font-size: 32px;
+  }
+
+  .homeleft p {
+    font-size: 12px;
+    margin-bottom: 30px;
+    line-height: 25px;
+  }
+
+  .btn {
+    width: 140px;
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+
+  .homeright {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1140px) {
+  .homeContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .homeright {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.homeright{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/hero2.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
+  }
+
+  .homeleft {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
+    height:60%;
+    background: var(--primary-green);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1; 
+  }
+
+  .homeleft h1 {
+    font-size: 30px;
+  }
+
+  .homeleft p {
+    font-size: 10px;
+    margin-bottom: 30px;
+    line-height: 28px;
+  }
+
+  .btn {
+    width: 140px;
+    font-size: 14px;
+    padding: 12px 8px;
+    background: white;
+    color: green;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
